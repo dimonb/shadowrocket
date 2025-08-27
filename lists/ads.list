@@ -1,0 +1,5 @@
+# Block some adds
+DOMAIN-SUFFIX,app-measurement.com,REJECT-DICT
+DOMAIN-SUFFIX,ads.adfox.ru,REJECT-DICT
+DOMAIN-SUFFIX,yandexmetrica.com,REJECT-DICT
+DOMAIN-SUFFIX,an.yandex.ru,REJECT-DICT

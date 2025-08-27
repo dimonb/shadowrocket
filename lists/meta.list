@@ -1,0 +1,12 @@
+# Facebook
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+
+
+
+# Whatsapp
+DOMAIN-KEYWORD,whatsapp
+DST-PORT,3478

@@ -1,0 +1,19 @@
+# Основные
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktoktv.com
+DOMAIN-SUFFIX,tiktokvideo.com
+
+# Исторические (musical.ly)
+DOMAIN-SUFFIX,musical.ly
+DOMAIN-SUFFIX,muscdn.com
+
+# CDN / партнёрские
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibyteimg.com
+DOMAIN-SUFFIX,ipstatp.com
+DOMAIN-SUFFIX,bytefcdn-oversea.com
+DOMAIN-SUFFIX,ibytedtos.com
+DOMAIN-SUFFIX,ibytedapm.com
