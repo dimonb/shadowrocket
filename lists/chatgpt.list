@@ -1,0 +1,4 @@
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,statsigapi.net   # A/B эксперименты
+DOMAIN-SUFFIX,stripe.com       # биллинг
