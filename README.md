@@ -15,15 +15,16 @@ This repository contains Shadowrocket configuration files designed to provide:
 ```
 shadowrocket/
 ├── README.md                 # This file
-├── CNAME                     # Custom domain configuration
-├── ru.conf                   # Main Russian configuration
-├── ru2.conf                  # Alternative Russian configuration
+├── CNAME                     # Custom domain configuration (e.g., shadowrocket.ebac.dev)
+├── ru.conf                   # Main configuration (static rules)
+├── ru2.conf                  # Alternative configuration using hosted RULE-SETs
 ├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
 ├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
-└── lists/                    # Domain and service-specific lists
-    ├── ads.list             # Advertisement domains
+└── lists/                    # Domain and service-specific lists (hosted)
+    ├── ads.list             # Advertisement/analytics domains
+    ├── apple-private.list   # Apple private relay and related
     ├── binance.list         # Binance-related domains
-    ├── chatgpt.list         # ChatGPT domains
+    ├── chatgpt.list         # ChatGPT/OpenAI domains
     ├── google.list          # Google services
     ├── meta.list            # Meta/Facebook services
     ├── rutracker.list       # RuTracker domains
@@ -38,8 +39,8 @@ shadowrocket/
 
 ### Main Configurations
 
-- **`ru.conf`** - Primary configuration optimized for Russian users
-- **`ru2.conf`** - Alternative configuration with different routing rules
+- **`ru.conf`** - Primary configuration with local inline rules
+- **`ru2.conf`** - Alternative configuration that references hosted RULE-SETs
 - **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
 - **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
 
@@ -59,11 +60,12 @@ shadowrocket/
 
 ## 🎯 Domain Lists
 
-The `lists/` directory contains specialized domain lists for different services:
+The `lists/` directory contains specialized domain lists for different services. These lists are also hosted for remote inclusion.
 
 | List | Purpose | Description |
 |------|---------|-------------|
 | `ads.list` | Ad Blocking | Advertisement and tracking domains |
+| `apple-private.list` | Apple | Apple Private Relay and related |
 | `binance.list` | Crypto Trading | Binance exchange domains |
 | `chatgpt.list` | AI Services | ChatGPT and OpenAI domains |
 | `google.list` | Google Services | Google search, maps, and other services |
@@ -75,6 +77,13 @@ The `lists/` directory contains specialized domain lists for different services:
 | `whatsapp.list` | Messaging | WhatsApp messaging service |
 | `zoom.list` | Video Conferencing | Zoom meeting and webinar domains |
 
+## 🌐 Hosted Endpoints
+
+- **Lists base URL**: `https://s.dimonb.com/lists/`
+  - Example: `https://s.dimonb.com/lists/ads.list`
+  - Used in `ru2.conf` via `RULE-SET,https://s.dimonb.com/lists/<name>.list,...`
+- **CNAME**: `shadowrocket.ebac.dev` (for custom hosting/config delivery)
+
 ## 🚀 Quick Start
 
 1. **Clone the repository:**
@@ -84,17 +93,18 @@ The `lists/` directory contains specialized domain lists for different services:
    ```
 
 2. **Choose your configuration:**
-   - For Russian users: Use `ru.conf` or `ru2.conf`
-   - For Contabo servers: Copy `contabo.conf.tpl` to `contabo.conf` and adjust values
+   - Inline rules (local file): use `ru.conf`
+   - Hosted lists (remote RULE-SETs): use `ru2.conf`
+   - Contabo servers: copy `contabo.conf.tpl` → `contabo.conf` and adjust values
 
 3. **Import to Shadowrocket:**
    - Open Shadowrocket app
    - Go to Settings → Config
-   - Import the chosen configuration file
+   - Import the chosen configuration file (or a URL if hosted)
 
 4. **Customize domain lists:**
    - Modify files in `lists/` directory as needed
-   - Update main configuration to reference custom lists
+   - For hosted usage, deploy updated lists to your hosting (see below)
 
 ## 🔧 Configuration Details
 
@@ -111,7 +121,7 @@ The `lists/` directory contains specialized domain lists for different services:
 - **Test URL**: `http://www.gstatic.com/generate_204`
 
 ### Geographic Rules
-- **Russia**: Direct connection
+- **Russia**: Direct connection (in `ru.conf`)
 - **China**: Direct connection  
 - **Israel**: Israel proxy group
 - **Brazil**: Brazil proxy group
@@ -120,9 +130,15 @@ The `lists/` directory contains specialized domain lists for different services:
 ## 🛡️ Privacy Features
 
 - **Ad blocking** for common advertising networks
-- **Analytics blocking** (Yandex Metrica, Google Analytics)
+- **Analytics blocking** (e.g., Yandex Metrica)
 - **Social media** routing through proxies
 - **Local network** protection
+
+## ☁️ Hosting Notes
+
+- Lists are referenced remotely in `ru2.conf` using `https://s.dimonb.com/lists/*.list`.
+- You can self-host using a static site/CDN or the provided `cloudflare-worker.js`.
+- If using a custom domain, set the CNAME (example provided in `CNAME`).
 
 ## 🔄 Updates
 
@@ -142,7 +158,7 @@ This configuration is regularly updated to:
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source. If you need a specific license, add a `LICENSE` file (e.g., MIT).
 
 ## ⚠️ Disclaimer
 
