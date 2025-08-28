@@ -26,6 +26,7 @@ RULE-SET,https://s.dimonb.com/lists/twitter.list,PROXY
 RULE-SET,https://s.dimonb.com/lists/tiktok.list,PROXY
 RULE-SET,https://s.dimonb.com/lists/whatsapp.list,PROXY
 RULE-SET,https://s.dimonb.com/lists/chatgpt.list,PROXY
+RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
 
 
 # final go to direct
