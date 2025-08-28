@@ -18,9 +18,8 @@ shadowrocket/
 ├── CNAME                     # Custom domain configuration
 ├── ru.conf                   # Main Russian configuration
 ├── ru2.conf                  # Alternative Russian configuration
-├── contabo.conf              # Contabo server configuration
-├── contabo2.conf             # Alternative Contabo configuration
-├── test.js                   # Testing utilities
+├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
+├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
 └── lists/                    # Domain and service-specific lists
     ├── ads.list             # Advertisement domains
     ├── binance.list         # Binance-related domains
@@ -41,8 +40,8 @@ shadowrocket/
 
 - **`ru.conf`** - Primary configuration optimized for Russian users
 - **`ru2.conf`** - Alternative configuration with different routing rules
-- **`contabo.conf`** - Configuration optimized for Contabo servers
-- **`contabo2.conf`** - Alternative Contabo server configuration
+- **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
+- **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
 
 ### Key Features
 
@@ -86,7 +85,7 @@ The `lists/` directory contains specialized domain lists for different services:
 
 2. **Choose your configuration:**
    - For Russian users: Use `ru.conf` or `ru2.conf`
-   - For Contabo servers: Use `contabo.conf` or `contabo2.conf`
+   - For Contabo servers: Copy `contabo.conf.tpl` to `contabo.conf` and adjust values
 
 3. **Import to Shadowrocket:**
    - Open Shadowrocket app
@@ -157,4 +156,4 @@ This configuration is provided for educational and personal use. Users are respo
 
 ---
 
-**Last updated**: 2024-07-03
+**Last updated**: 2025-08-28
