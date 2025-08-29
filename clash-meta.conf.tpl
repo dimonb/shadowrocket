@@ -1,5 +1,5 @@
 
-#CLASH
+#CLASH,AUTH
 
 mixed-port: 7890
 allow-lan: true
