@@ -1,0 +1,9 @@
+# Notion — домены (только второго уровня)
+DOMAIN-SUFFIX,notion.com
+DOMAIN-SUFFIX,notion.site
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notionusercontent.com
+
+# Notion (IP-диапазоны)
+IP-CIDR,208.103.161.0/24
+IP-CIDR,2602:f79a::/48
