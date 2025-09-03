@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,youtube-nocookie.com
 DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,gvt2.com
 
 # Google Meet (Workspace)
 IP-CIDR,74.125.250.0/24
