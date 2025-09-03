@@ -7,6 +7,8 @@ DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,app-analytics-services.com
 
 # Google Meet (Workspace)
 IP-CIDR,74.125.250.0/24
