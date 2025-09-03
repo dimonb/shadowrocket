@@ -50,6 +50,7 @@ rules:
   - RULE-SET,https://s.dimonb.com/lists/cursor.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/discord.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/cloudflare.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/misc.list,PROXY
 
 
   # всё остальное напрямую
