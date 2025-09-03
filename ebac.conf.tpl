@@ -10,9 +10,12 @@ ipv6 = true
 proxy = url-test,interval=600,tolerance=100,timeout=5,url=http://www.gstatic.com/generate_204,policy-regex-filter=((DE)|(FR)|(IE)).*WS
 
 [Rule]
+
+# site to check ip
+DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
+
 # reject returning empty-dict-200 for some ads
 RULE-SET,https://s.dimonb.com/lists/ads.list,REJECT-DICT
-
 
 # force proxy
 RULE-SET,https://s.dimonb.com/lists/rutracker.list,PROXY
