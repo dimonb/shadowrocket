@@ -9,5 +9,11 @@ DOMAIN-SUFFIX,business.githubcopilot.com
 DOMAIN-SUFFIX,enterprise.githubcopilot.com
 DOMAIN-SUFFIX,githubassets.com
 
-#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv4_merged.txt
-#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv6_merged.txt
+# GitHub — IP-диапазоны (исключая actions)
+
+IP-CIDR,192.30.252.0/22     # hooks
+IP-CIDR,185.199.108.0/22    # hooks, pages, dependabot, packages, git
+IP-CIDR,140.82.112.0/20     # api, web, git, pages, packages
+IP-CIDR,143.55.64.0/20      # api, web, pages, importer
+IP-CIDR,2a0a:a440::/29      # IPv6 — hooks
+IP-CIDR,2606:50c0::/32      # IPv6 — hooks, dependabot, packages
