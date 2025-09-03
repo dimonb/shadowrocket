@@ -1,0 +1,15 @@
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.co
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discordapp.net
+DOMAIN-SUFFIX,discordcdn.com
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discord.dev
+DOMAIN-SUFFIX,discord.new
+DOMAIN-SUFFIX,discord.gift
+DOMAIN-SUFFIX,discordstatus.com
+
+# Discord — IP
+IP-CIDR,66.22.192.0/18
+IP-CIDR,162.159.128.0/19

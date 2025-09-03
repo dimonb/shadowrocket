@@ -1,0 +1,13 @@
+# GitHub — домены (только второго уровня)
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+
+# GitHub Copilot — домены (только второго уровня)
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,individual.githubcopilot.com
+DOMAIN-SUFFIX,business.githubcopilot.com
+DOMAIN-SUFFIX,enterprise.githubcopilot.com
+DOMAIN-SUFFIX,githubassets.com
+
+#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv4_merged.txt
+#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/github/ipv6_merged.txt

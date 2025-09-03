@@ -3,6 +3,10 @@ DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,t.co
 
+# Groq — домены (второго уровня)
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,api.groq.com
+
 # Twitter / X Inc. IP-диапазоны
 IP-CIDR,64.63.0.0/18
 IP-CIDR,69.195.160.0/19
@@ -19,3 +23,8 @@ IP-CIDR,202.160.128.0/24
 IP-CIDR,202.160.129.0/24
 IP-CIDR,202.160.130.0/24
 IP-CIDR,202.160.131.0/24
+
+# Groq — IP-диапазоны (CIDR)
+IP-CIDR,124.197.0.0/22
+IP-CIDR,185.111.200.0/22
+IP-CIDR,2607:ee40::/32

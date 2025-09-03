@@ -46,6 +46,10 @@ rules:
   - RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/ebac.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/notion.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/github.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/cursor.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/discord.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/cloudflare.list,PROXY
 
 
   # всё остальное напрямую
