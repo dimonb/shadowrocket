@@ -7,6 +7,10 @@ DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,groq.com
 DOMAIN-SUFFIX,api.groq.com
 
+# Grok AI — домены (второго уровня)
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+
 # Twitter / X Inc. IP-диапазоны
 IP-CIDR,64.63.0.0/18
 IP-CIDR,69.195.160.0/19
