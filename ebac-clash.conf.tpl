@@ -33,24 +33,24 @@ rules:
   # check vpn cpnnected
   - DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
 
-  - RULE-SET,https://out.ebac.dev/lists/rutracker.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/binance.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/zoom.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/google.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/meta.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/telegram.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/twitter.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/tiktok.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/whatsapp.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/chatgpt.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/apple-private.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/ebac.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/notion.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/github.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/cursor.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/discord.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/cloudflare.list,PROXY
-  - RULE-SET,https://out.ebac.dev/lists/misc.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/binance.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/zoom.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/google.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/meta.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/telegram.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/twitter.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/discord.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
 
 
   # всё остальное напрямую
