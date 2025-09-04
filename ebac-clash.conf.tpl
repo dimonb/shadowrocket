@@ -33,24 +33,24 @@ rules:
   # check vpn cpnnected
   - DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
 
-  - RULE-SET,https://s.dimonb.com/lists/rutracker.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/binance.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/zoom.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/google.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/meta.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/telegram.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/twitter.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/tiktok.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/whatsapp.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/chatgpt.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/ebac.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/notion.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/github.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/cursor.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/discord.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/cloudflare.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/misc.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/rutracker.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/binance.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/zoom.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/google.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/meta.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/telegram.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/twitter.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/tiktok.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/whatsapp.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/chatgpt.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/apple-private.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/ebac.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/notion.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/github.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/cursor.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/discord.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/cloudflare.list,PROXY
+  - RULE-SET,https://out.ebac.dev/lists/misc.list,PROXY
 
 
   # всё остальное напрямую
