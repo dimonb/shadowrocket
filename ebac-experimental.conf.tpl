@@ -19,18 +19,18 @@ DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/ads.list,REJECT-DICT
 
 # force proxy
-RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/binance.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/zoom.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/binance.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/zoom.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/google.list,ru-proxy
-RULE-SET,https://shadowrocket.ebac.dev/lists/meta.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/meta.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/telegram.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/twitter.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/twitter.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,ru-proxy
