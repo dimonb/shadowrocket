@@ -7,7 +7,7 @@ dns-server = 1.1.1.1, 1.0.0.1, 8.8.8.8, system
 ipv6 = true
 
 [Proxy Group]
-proxy = url-test,interval=600,tolerance=100,timeout=5,url=http://www.gstatic.com/generate_204,policy-regex-filter=((DE)|(FR)|(IE)).*(WS|VLESS)
+proxy = url-test,interval=600,tolerance=100,timeout=5,url=http://www.gstatic.com/generate_204,policy-regex-filter=((DE)|(FR)|(IE)).*(WS)
 ru-proxy = url-test,interval=600,tolerance=100,timeout=5,url=http://www.gstatic.com/generate_204,policy-regex-filter=(RU).*(VLESS)
 
 [Rule]
