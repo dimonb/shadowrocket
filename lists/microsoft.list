@@ -1,0 +1,14 @@
+# Microsoft main (Azure, Office 365, Xbox, etc.)
+IP-ASN,8075
+
+# Azure ExpressRoute peering
+IP-ASN,12076
+
+# Microsoft CDN/stub services
+IP-ASN,8068
+
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,msecnd.net
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,bing.com
