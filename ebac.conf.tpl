@@ -13,6 +13,7 @@ proxy = url-test,interval=600,tolerance=100,timeout=5,url=http://www.gstatic.com
 
 # site to check ip
 DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
+IP-ASN,13335,PROXY
 
 # reject returning empty-dict-200 for some ads
 RULE-SET,https://shadowrocket.ebac.dev/lists/ads.list,REJECT-DICT
