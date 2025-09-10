@@ -17,6 +17,14 @@ dns:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
 
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
 proxies:
   - PROXY_CONFIGS
 
