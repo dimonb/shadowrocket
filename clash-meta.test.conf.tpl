@@ -1,0 +1,85 @@
+
+#CLASH,AUTH
+
+mixed-port: 7890
+allow-lan: true
+mode: Rule
+log-level: info
+
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  nameserver:
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  fallback:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+
+tun:
+  enable: true
+  stack: system
+  dns-hijack:
+    - any:53
+  auto-route: true
+  auto-detect-interface: true
+
+proxies:
+  - PROXY_CONFIGS
+
+proxy-groups:
+  - name: WS-AUTO
+    type: url-test
+    proxies:
+      - PROXY_LIST
+    filter: '((DE)|(FR)|(IE)).*WS'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 100
+    lazy: true
+
+  - name: VLESS-AUTO
+    type: url-test
+    proxies:
+      - PROXY_LIST
+    filter: '((DE)|(FR)|(IE)).*VLESS'
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 100
+    lazy: true
+
+  - name: PROXY
+    type: fallback
+    proxies:
+      - WS-AUTO
+      - VLESS-AUTO
+    url: http://www.gstatic.com/generate_204
+    interval: 600
+
+
+rules:
+  # check vpn cpnnected
+  - DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
+
+  - RULE-SET,https://s.dimonb.com/lists/rutracker.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/binance.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/zoom.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/google.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/meta.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/telegram.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/twitter.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/tiktok.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/whatsapp.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/chatgpt.list,PROXY
+  - RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/discord.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/microsoft.list,PROXY
+
+  # всё остальное напрямую
+  - MATCH,DIRECT
