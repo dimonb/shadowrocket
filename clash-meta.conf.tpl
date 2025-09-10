@@ -41,17 +41,17 @@ rules:
   # check vpn cpnnected
   - DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
 
-  - RULE-SET,https://s.dimonb.com/lists/rutracker.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/binance.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/zoom.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/google.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/meta.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/telegram.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/twitter.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/tiktok.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/whatsapp.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/chatgpt.list,PROXY
-  - RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/binance.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/zoom.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/google.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/meta.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/telegram.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/twitter.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
