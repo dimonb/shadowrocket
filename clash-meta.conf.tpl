@@ -52,7 +52,13 @@ rules:
   - RULE-SET,https://s.dimonb.com/lists/whatsapp.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/chatgpt.list,PROXY
   - RULE-SET,https://s.dimonb.com/lists/apple-private.list,PROXY
-
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/discord.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/microsoft.list,PROXY
 
   # всё остальное напрямую
   - MATCH,DIRECT

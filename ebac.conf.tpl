@@ -17,6 +17,9 @@ DOMAIN-SUFFIX,whatismyipaddress.com,PROXY
 # reject returning empty-dict-200 for some ads
 RULE-SET,https://shadowrocket.ebac.dev/lists/ads.list,REJECT-DICT
 
+# specific ebac rules
+RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+
 # force proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/binance.list,PROXY
@@ -29,7 +32,6 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
-RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
