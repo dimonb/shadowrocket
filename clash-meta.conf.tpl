@@ -5,6 +5,7 @@ mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
+ipv6: true
 
 dns:
   enable: true
