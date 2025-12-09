@@ -53,6 +53,8 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/twilio.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/payment-gates.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/amazon.list,PROXY
+
 
   # всё остальное напрямую
   - MATCH,DIRECT

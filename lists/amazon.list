@@ -1,0 +1,4 @@
+#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/amazon/ipv4_merged.txt
+#NETSET https://raw.githubusercontent.com/lord-alfred/ipranges/main/amazon/ipv6_merged.txt
+
+IP-ASN,16509
