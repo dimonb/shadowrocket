@@ -39,6 +39,8 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/discord.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/microsoft.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/twilio.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/payment-gates.list,PROXY
 
 FINAL,DIRECT
 

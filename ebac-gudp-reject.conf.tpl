@@ -57,6 +57,8 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/discord.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/twilio.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/payment-gates.list,PROXY
 
 FINAL,DIRECT
 
