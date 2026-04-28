@@ -1,0 +1,47 @@
+{
+  "Name": "RU whitelist direct, rest proxy",
+  "LastUpdated": 1777407419,
+  "lastUpdatedDate": 1777407419,
+
+  "GlobalProxy": "true",
+  "RouteOrder": "Block-Proxy-Direct",
+  "DomainStrategy": "IPIfNonMatch",
+  "FakeDnsEnabled": true,
+
+  "Geoipurl": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/geoip.dat",
+  "Geositeurl": "https://raw.githubusercontent.com/runetfreedom/russia-v2ray-rules-dat/release/geosite.dat",
+
+  "DirectSites": [
+    "domain:ru",
+    "domain:рф",
+    "domain:su",
+    "geosite:private",
+    "geosite:ru-available-only-inside"
+  ],
+
+  "DirectIp": [
+    "geoip:private",
+    "geoip:ru",
+    "geoip:ru-whitelist",
+    "10.0.0.0/8",
+    "172.16.0.0/12",
+    "192.168.0.0/16",
+    "100.64.0.0/10"
+  ],
+
+  "ProxySites": [
+    "geosite:ru-blocked"
+  ],
+
+  "ProxyIp": [
+    "geoip:ru-blocked",
+    "geoip:ru-blocked-community",
+    "geoip:re-filter"
+  ],
+
+  "BlockSites": [
+    "geosite:category-ads-all"
+  ],
+
+  "BlockIp": []
+}
