@@ -18,6 +18,8 @@ shadowrocket/
 ├── CNAME                     # Custom domain configuration (e.g., shadowrocket.ebac.dev)
 ├── ru.conf                   # Main configuration (static rules)
 ├── ru2.conf                  # Alternative configuration using hosted RULE-SETs
+├── happ.conf.tpl             # HAPP config template with embedded routing payload
+├── happ.routing.json         # Source routing JSON for happ.conf.tpl
 ├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
 ├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
 └── lists/                    # Domain and service-specific lists (hosted)
@@ -41,8 +43,24 @@ shadowrocket/
 
 - **`ru.conf`** - Primary configuration with local inline rules
 - **`ru2.conf`** - Alternative configuration that references hosted RULE-SETs
+- **`happ.conf.tpl`** - HAPP configuration template with embedded base64 routing JSON
+- **`happ.routing.json`** - Source routing JSON for `happ.conf.tpl`
 - **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
 - **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
+
+### Updating `happ.conf.tpl`
+
+When changing routing rules in `happ.routing.json`, update the timestamp fields in that file as well:
+- `LastUpdated`
+- `lastUpdatedDate`
+
+Then encode the routing JSON and copy it to the clipboard:
+
+```bash
+base64 -i happ.routing.json | tr -d '\n' | pbcopy
+```
+
+Paste the resulting value after `happ://routing/onadd/` in `happ.conf.tpl`.
 
 ### Key Features
 
@@ -172,4 +190,4 @@ This configuration is provided for educational and personal use. Users are respo
 
 ---
 
-**Last updated**: 2025-08-28
+**Last updated**: 2026-04-29
