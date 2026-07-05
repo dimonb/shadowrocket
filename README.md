@@ -27,6 +27,7 @@ shadowrocket/
     ├── apple-private.list   # Apple private relay and related
     ├── binance.list         # Binance-related domains
     ├── chatgpt.list         # ChatGPT/OpenAI domains
+    ├── claude.list          # Claude/Anthropic domains
     ├── google.list          # Google services
     ├── meta.list            # Meta/Facebook services
     ├── rutracker.list       # RuTracker domains
@@ -86,6 +87,7 @@ The `lists/` directory contains specialized domain lists for different services.
 | `apple-private.list` | Apple | Apple Private Relay and related |
 | `binance.list` | Crypto Trading | Binance exchange domains |
 | `chatgpt.list` | AI Services | ChatGPT and OpenAI domains |
+| `claude.list` | AI Services | Claude and Anthropic domains |
 | `google.list` | Google Services | Google search, maps, and other services |
 | `meta.list` | Social Media | Facebook, Instagram, and Meta services |
 | `rutracker.list` | File Sharing | RuTracker torrent tracker |

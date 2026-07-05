@@ -1,0 +1,4 @@
+# Claude / Anthropic — домены (только второй уровень)
+DOMAIN-SUFFIX,anthropic.com    # API + Claude Code (api.anthropic.com, console)
+DOMAIN-SUFFIX,claude.ai        # веб-клиент
+DOMAIN-SUFFIX,claude.com       # редиректы/маркетинг

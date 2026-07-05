@@ -49,6 +49,7 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/twitter.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,ru-proxy
