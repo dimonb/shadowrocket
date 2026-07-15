@@ -1,0 +1,6 @@
+# Constructor — домены (только второй уровень)
+DOMAIN-SUFFIX,constr.dev            # constr.dev + субдомены
+DOMAIN-SUFFIX,constructor.tech
+DOMAIN-SUFFIX,constructor.org
+DOMAIN-SUFFIX,constructor.dev
+DOMAIN-SUFFIX,dev-constructor.dev

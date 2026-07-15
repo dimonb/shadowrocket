@@ -52,6 +52,7 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,ru-proxy
+RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,ru-proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,ru-proxy
