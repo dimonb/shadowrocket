@@ -19,6 +19,7 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/ads.list,REJECT-DICT
 
 # specific ebac rules
 RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
 
 # force proxy
 RULE-SET,https://shadowrocket.ebac.dev/lists/rutracker.list,PROXY

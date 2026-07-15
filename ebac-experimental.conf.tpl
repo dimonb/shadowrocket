@@ -33,6 +33,7 @@ RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
 RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY

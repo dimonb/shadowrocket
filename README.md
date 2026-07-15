@@ -88,6 +88,7 @@ The `lists/` directory contains specialized domain lists for different services.
 | `binance.list` | Crypto Trading | Binance exchange domains |
 | `chatgpt.list` | AI Services | ChatGPT and OpenAI domains |
 | `claude.list` | AI Services | Claude and Anthropic domains |
+| `constructor.list` | Corporate | Constructor Group domains (constr.dev, constructor.tech/.org/.dev) |
 | `google.list` | Google Services | Google search, maps, and other services |
 | `meta.list` | Social Media | Facebook, Instagram, and Meta services |
 | `rutracker.list` | File Sharing | RuTracker torrent tracker |
