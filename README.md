@@ -45,6 +45,7 @@ shadowrocket/
 - **`ru.conf`** - Primary configuration with local inline rules
 - **`ru2.conf`** - Alternative configuration that references hosted RULE-SETs
 - **`happ.conf.tpl`** - HAPP configuration template with embedded base64 routing JSON
+- **`ebac-mihomo.yaml.tpl`** - mihomo subscription (Clash Mi, Clash Verge Rev, FlClash): one manually selected entry per region, everything via VPN except RU/BY, refreshed hourly by the `profile-update-interval` header cfgapp sends
 - **`happ.routing.json`** - Source routing JSON for `happ.conf.tpl`
 - **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
 - **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
