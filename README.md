@@ -20,6 +20,7 @@ shadowrocket/
 ├── ru2.conf                  # Alternative configuration using hosted RULE-SETs
 ├── happ.conf.tpl             # HAPP config template with embedded routing payload
 ├── happ.routing.json         # Source routing JSON for happ.conf.tpl
+├── happ-auto.conf.tpl        # HAPP JSON subscription: full Xray configs with ordered failover
 ├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
 ├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
 └── lists/                    # Domain and service-specific lists (hosted)
@@ -46,6 +47,7 @@ shadowrocket/
 - **`ru2.conf`** - Alternative configuration that references hosted RULE-SETs
 - **`happ.conf.tpl`** - HAPP configuration template with embedded base64 routing JSON
 - **`happ.routing.json`** - Source routing JSON for `happ.conf.tpl`
+- **`happ-auto.conf.tpl`** - HAPP *JSON* subscription (see below)
 - **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
 - **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
 
@@ -62,6 +64,21 @@ base64 -i happ.routing.json | tr -d '\n' | pbcopy
 ```
 
 Paste the resulting value after `happ://routing/onadd/` in `happ.conf.tpl`.
+
+### `happ-auto.conf.tpl` (HAPP JSON subscription)
+
+First line `#HAPP,JSON,AUTH`; the following `#key: value` lines are HAPP directives, sent as
+response headers. The rest is an Xray client config skeleton: the subscription service puts the
+servers of the `sub=` group in place of `"PROXY_OUTBOUNDS"` and routes rules whose
+`balancerTag`/`outboundTag` is `"PROXY"` to them. The response is a JSON array:
+
+- **Auto** (the skeleton's `remarks`) — every server of the group in the group's order: the first
+  while its health checks pass (`burstObservatory`, settings from the skeleton), else the next; the
+  last one takes over when all others fail. Switching takes up to `interval × sampling`.
+- one config per server, to pin one by hand.
+
+HAPP passes JSON configs to Xray as they are — its own routing profile does not apply, so the
+routing lives in the skeleton. Only VLESS servers (REALITY, XHTTP) can appear here.
 
 ### Key Features
 
