@@ -1,0 +1,15 @@
+{
+  "Name": "dimonb.auto",
+  "LastUpdated": "1762722000",
+  "GlobalProxy": "true",
+  "Geoipurl": "https://cdn.jsdelivr.net/gh/runetfreedom/russia-v2ray-rules-dat@release/geoip.dat",
+  "Geositeurl": "https://cdn.jsdelivr.net/gh/v2fly/domain-list-community@release/dlc.dat",
+  "DirectSites": ["geosite:category-ru"],
+  "DirectIp": ["geoip:ru", "geoip:private"],
+  "ProxySites": [],
+  "ProxyIp": [],
+  "BlockSites": [],
+  "BlockIp": [],
+  "DomainStrategy": "IPIfNonMatch",
+  "FakeDNS": "false"
+}

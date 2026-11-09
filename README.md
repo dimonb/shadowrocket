@@ -21,6 +21,7 @@ shadowrocket/
 ├── happ.conf.tpl             # HAPP config template with embedded routing payload
 ├── happ.routing.json         # Source routing JSON for happ.conf.tpl
 ├── happ-auto.conf.tpl        # HAPP JSON subscription: full Xray configs with ordered failover
+├── happ-auto.routing.json    # Source routing profile for happ-auto.conf.tpl
 ├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
 ├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
 └── lists/                    # Domain and service-specific lists (hosted)
@@ -77,8 +78,15 @@ servers of the `sub=` group in place of `"PROXY_OUTBOUNDS"` and routes rules who
   last one takes over when all others fail. Switching takes up to `interval × sampling`.
 - one config per server, to pin one by hand.
 
-HAPP passes JSON configs to Xray as they are — its own routing profile does not apply, so the
-routing lives in the skeleton. Only VLESS servers (REALITY, XHTTP) can appear here.
+HAPP passes JSON configs to Xray as they are, adding the rules of the subscription's routing
+profile (`#routing:` → the `routing` header; source `happ-auto.routing.json`, base64 after
+`happ://routing/onadd/`, bump `LastUpdated` on every change). That profile is what makes
+`geoip:ru` / `geosite:category-ru` work: HAPP downloads *its* `Geoipurl`/`Geositeurl` and attaches
+them to the JSON configs — without one, geo rules silently match nothing, and a geoip file without
+the requested tag stops the core ("section RU is missing"). Hence runetfreedom's geoip (has `ru`)
+and v2fly's `dlc.dat` (has `category-ru`; runetfreedom's geosite is over jsDelivr's 20 MB limit).
+The skeleton's own domain rules (`.ru`, `.рф`, `.su`, …) still send Russian sites direct if the geo
+files fail to download. Only VLESS servers (REALITY, XHTTP) can appear here.
 
 ### Key Features
 
