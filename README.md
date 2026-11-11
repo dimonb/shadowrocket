@@ -87,6 +87,9 @@ the requested tag stops the core ("section RU is missing"). Hence runetfreedom's
 and v2fly's `dlc.dat` (has `category-ru`; runetfreedom's geosite is over jsDelivr's 20 MB limit).
 The skeleton's own domain rules (`.ru`, `.рф`, `.su`, …) still send Russian sites direct if the geo
 files fail to download. Only VLESS servers (REALITY, XHTTP) can appear here.
+Sniffing uses `"routeOnly": false`: the server gets the sniffed name, not the address the
+app dialled — apps often dial IPv6 (YouTube on Google's v6), and exits without IPv6 fail those;
+with the name the server resolves IPv4 itself.
 
 ### Key Features
 

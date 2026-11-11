@@ -12,14 +12,14 @@
       "port": 10808,
       "protocol": "socks",
       "settings": { "auth": "noauth", "udp": true },
-      "sniffing": { "enabled": true, "destOverride": ["http", "tls", "quic"], "routeOnly": true }
+      "sniffing": { "enabled": true, "destOverride": ["http", "tls", "quic"], "routeOnly": false }
     },
     {
       "tag": "http",
       "listen": "127.0.0.1",
       "port": 10809,
       "protocol": "http",
-      "sniffing": { "enabled": true, "destOverride": ["http", "tls"], "routeOnly": true }
+      "sniffing": { "enabled": true, "destOverride": ["http", "tls"], "routeOnly": false }
     }
   ],
   "outbounds": [
