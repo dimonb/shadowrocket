@@ -16,6 +16,11 @@ dns:
   fallback:
     - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
+  # NetBird (Constructor VPN): internal hosts need their real 10.x / 100.x address,
+  # so the OS routes them into the NetBird tunnel instead of a fake IP into Clash
+  fake-ip-filter:
+    - "+.constr.dev"
+    - "+.constructor.tech"
 
 proxies:
   - PROXY_CONFIGS
@@ -46,6 +51,11 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+  # NetBird (Constructor VPN): internal Constructor addresses are reachable only
+  # through the NetBird tunnel, never via PROXY (must stay above constructor.list)
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
   - RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
