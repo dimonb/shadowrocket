@@ -177,13 +177,15 @@ The `lists/` directory contains specialized domain lists for different services.
 - **Other countries**: General proxy
 
 ### NetBird (Constructor VPN) alongside Clash
-`clash-meta.conf.tpl` and `ebac-clash.conf.tpl` let NetBird run in parallel: `constr.dev` and
-`constructor.tech` are excluded from fake-ip, and internal addresses (`10.0.0.0/8`,
-`172.16.0.0/12`, `100.64.0.0/10`) go DIRECT above `constructor.list`, so they reach the NetBird
-tunnel instead of PROXY.
+`clash-meta.conf.tpl` and `ebac-clash.conf.tpl` let NetBird run in parallel: every
+`constructor.list` domain (`constr.dev`, `constructor.tech`/`.org`/`.dev`, `dev-constructor.dev`)
+is excluded from fake-ip, and internal addresses (`10.0.0.0/8`, `172.16.0.0/12`,
+`100.64.0.0/10`) go DIRECT above `constructor.list`, so they reach the NetBird tunnel instead of
+PROXY. These rules sit last, just before `MATCH`: an IP rule resolves the name, so only names no
+other list matched pay for the lookup. Keep `fake-ip-filter` in step with `constructor.list`.
 
 **Clash Verge with both TUN and System Proxy on:** the subscription cannot set the system proxy
-bypass, so add `*.constr.dev;*.constructor.tech;10.*;100.100.*` in Settings → System Proxy →
+bypass, so add `*.constr.dev;*.constructor.tech;*.constructor.org;*.constructor.dev;*.dev-constructor.dev;10.*;100.100.*` in Settings → System Proxy →
 Proxy Bypass, or turn System Proxy off (TUN does not need it).
 
 ## 🛡️ Privacy Features

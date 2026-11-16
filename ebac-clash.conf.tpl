@@ -21,6 +21,9 @@ dns:
   fake-ip-filter:
     - "+.constr.dev"
     - "+.constructor.tech"
+    - "+.constructor.org"
+    - "+.constructor.dev"
+    - "+.dev-constructor.dev"
 
 proxies:
   - PROXY_CONFIGS
@@ -51,12 +54,6 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
-  # NetBird (Constructor VPN): internal Constructor addresses are reachable only
-  # through the NetBird tunnel, never via PROXY (must stay above constructor.list)
-  - IP-CIDR,100.64.0.0/10,DIRECT
-  - IP-CIDR,10.0.0.0/8,DIRECT
-  - IP-CIDR,172.16.0.0/12,DIRECT
-  - RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/cursor.list,PROXY
@@ -66,6 +63,13 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/twilio.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/payment-gates.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/amazon.list,PROXY
+  # NetBird (Constructor VPN): internal Constructor addresses are reachable only
+  # through the NetBird tunnel, never via PROXY (must stay above constructor.list).
+  # Last before MATCH: IP rules resolve the name, so only names no list matched pay for it
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
 
 
   # всё остальное напрямую
