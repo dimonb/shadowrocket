@@ -52,6 +52,7 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/tiktok.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/whatsapp.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/chatgpt.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/claude.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/apple-private.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/notion.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/github.list,PROXY
@@ -60,6 +61,11 @@ rules:
   - RULE-SET,https://shadowrocket.ebac.dev/lists/cloudflare.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/misc.list,PROXY
   - RULE-SET,https://shadowrocket.ebac.dev/lists/microsoft.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/ebac.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/constructor.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/twilio.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/payment-gates.list,PROXY
+  - RULE-SET,https://shadowrocket.ebac.dev/lists/amazon.list,PROXY
 
   # всё остальное напрямую
   - MATCH,DIRECT
