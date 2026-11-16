@@ -176,6 +176,16 @@ The `lists/` directory contains specialized domain lists for different services.
 - **Brazil**: Brazil proxy group
 - **Other countries**: General proxy
 
+### NetBird (Constructor VPN) alongside Clash
+`clash-meta.conf.tpl` and `ebac-clash.conf.tpl` let NetBird run in parallel: `constr.dev` and
+`constructor.tech` are excluded from fake-ip, and internal addresses (`10.0.0.0/8`,
+`172.16.0.0/12`, `100.64.0.0/10`) go DIRECT above `constructor.list`, so they reach the NetBird
+tunnel instead of PROXY.
+
+**Clash Verge with both TUN and System Proxy on:** the subscription cannot set the system proxy
+bypass, so add `*.constr.dev;*.constructor.tech;10.*;100.100.*` in Settings → System Proxy →
+Proxy Bypass, or turn System Proxy off (TUN does not need it).
+
 ## 🛡️ Privacy Features
 
 - **Ad blocking** for common advertising networks
