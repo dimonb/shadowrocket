@@ -22,6 +22,7 @@ shadowrocket/
 ├── happ.routing.json         # Source routing JSON for happ.conf.tpl
 ├── happ-auto.conf.tpl        # HAPP JSON subscription: full Xray configs with ordered failover
 ├── happ-auto.routing.json    # Source routing profile for happ-auto.conf.tpl
+├── ebac-happ.conf.tpl        # HAPP JSON subscription for ebac: failover + routing by lists/
 ├── contabo.conf.tpl          # Contabo server config template (copy → contabo.conf)
 ├── cloudflare-worker.js      # Optional Cloudflare Worker for rules hosting
 └── lists/                    # Domain and service-specific lists (hosted)
@@ -49,6 +50,7 @@ shadowrocket/
 - **`happ.conf.tpl`** - HAPP configuration template with embedded base64 routing JSON
 - **`happ.routing.json`** - Source routing JSON for `happ.conf.tpl`
 - **`happ-auto.conf.tpl`** - HAPP *JSON* subscription (see below)
+- **`ebac-happ.conf.tpl`** - HAPP *JSON* subscription for ebac, routed by `lists/` (see below)
 - **`contabo.conf.tpl`** - Template for Contabo servers (copy to `contabo.conf` and fill in)
 - **`cloudflare-worker.js`** - Worker script to serve lists/configs via Cloudflare
 
@@ -90,6 +92,17 @@ files fail to download. Only VLESS servers (REALITY, XHTTP) can appear here.
 Sniffing uses `"routeOnly": false`: the server gets the sniffed name, not the address the
 app dialled — apps often dial IPv6 (YouTube on Google's v6), and exits without IPv6 fail those;
 with the name the server resolves IPv4 itself.
+
+### `ebac-happ.conf.tpl` (HAPP JSON, routed by lists)
+
+The same failover as `happ-auto.conf.tpl`, routed like `ebac.conf.tpl`: only the sites in
+`lists/` go through the proxy, everything else goes direct, `ads.list` is blocked. A routing rule
+names its lists in `"ruleSet": [<list url>, …]`; the subscription service expands them into Xray
+`domain` / `ip` rules (NETSET ranges included; `IP-ASN` has no Xray equivalent and is dropped —
+keep a NETSET next to it). QUIC (UDP 443) to listed sites is blocked so apps fall back to TCP
+through the proxy. The final `direct` rule is required: Xray sends unmatched traffic to its first
+outbound, which is the proxy. No routing profile is sent — the skeleton has no geo rules.
+Use it with `sub=happ` (servers in failover order).
 
 ### Key Features
 
